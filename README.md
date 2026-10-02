@@ -63,6 +63,7 @@ Use `install --with-deps chromium` on Linux machines without browser system depe
 | `threads` | `2` | TestNG method worker count |
 | `artifacts` | `all` | `failure` retains diagnostics only for failed tests |
 | `artifactDir` | `target/evidence` | report/evidence destination; use a different folder for each run |
+| `browserExecutable` | unset | optional local diagnostic override; standard CI uses the Playwright-matched browser |
 
 ```sh
 mvn test -Dgroups=smoke

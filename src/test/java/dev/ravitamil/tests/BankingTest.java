@@ -25,7 +25,7 @@ public class BankingTest extends BaseTest {
         var response = s.context.request().get("/api/account");
         assertEquals(response.status(), 200);
         var account = JSON.readTree(response.body());
-        assertEquals(account.path("balance").decimalValue().toPlainString(), "2374.50");
+        assertEquals(account.path("balance").decimalValue().compareTo(new java.math.BigDecimal("2374.50")), 0);
         assertEquals(account.path("transactions").get(0).path("recipient").asText(), "Jamie Lee");
     }
     @DataProvider(name = "invalidCredentials", parallel = true)
@@ -56,12 +56,12 @@ public class BankingTest extends BaseTest {
     public void transferApiIsIdempotent() throws Exception {
         var api = session().context.request();
         assertEquals(api.post("/api/login", RequestOptions.create().setData(Map.of("email", "qa@example.test", "password", "Demo123!"))).status(), 200);
-        var options = RequestOptions.create().setHeader("Idempotency-Key", "repeat-test").setData(Map.of("recipient", "Jamie Lee", "amount", "100.00"));
+        var options = RequestOptions.create().setHeader("Idempotency-Key", "repeat-test").setData(Map.of("recipient", "Jamie Lee", "amount", "2000.00"));
         assertEquals(api.post("/api/transfer", options).status(), 201);
         assertEquals(api.post("/api/transfer", options).status(), 200);
         assertEquals(api.post("/api/transfer", RequestOptions.create().setHeader("Idempotency-Key", "repeat-test").setData(Map.of("recipient", "Jamie Lee", "amount", "200"))).status(), 409);
         var account = JSON.readTree(api.get("/api/account").body());
-        assertEquals(account.path("balance").asDouble(), 2400.0);
+        assertEquals(account.path("balance").asDouble(), 500.0);
         assertEquals(account.path("transactions").size(), 1);
     }
     @Test(groups = "api", description = "Reject precision loss and nonpositive API amounts")

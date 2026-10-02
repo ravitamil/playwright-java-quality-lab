@@ -93,7 +93,6 @@ public final class BankingDemo implements AutoCloseable {
         if (!List.of("Jamie Lee", "Sam Patel").contains(recipient) || amount.signum() <= 0) {
             json(exchange, 422, Map.of("error", "Choose a recipient and a positive amount")); return;
         }
-        if (amount.compareTo(account.balance) > 0) { json(exchange, 422, Map.of("error", "Insufficient funds")); return; }
         String key = exchange.getRequestHeaders().getFirst("Idempotency-Key");
         if (key == null || key.isBlank()) { json(exchange, 400, Map.of("error", "Idempotency key required")); return; }
         String signature = recipient + ":" + amount.toPlainString();
@@ -102,6 +101,7 @@ public final class BankingDemo implements AutoCloseable {
             if (!signature.equals(previous.signature())) { json(exchange, 409, Map.of("error", "Idempotency key already used for another transfer")); return; }
             json(exchange, 200, previous.response()); return;
         }
+        if (amount.compareTo(account.balance) > 0) { json(exchange, 422, Map.of("error", "Insufficient funds")); return; }
         account.balance = account.balance.subtract(amount);
         Map<String, Object> transaction = Map.of("recipient", recipient, "amount", amount, "reference", "TX-" + UUID.randomUUID().toString().substring(0, 8));
         account.transactions.add(transaction);

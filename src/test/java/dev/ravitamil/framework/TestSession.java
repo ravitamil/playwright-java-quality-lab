@@ -28,10 +28,13 @@ public final class TestSession implements AutoCloseable {
         Files.createDirectories(directory);
         app = new BankingDemo();
         playwright = Playwright.create();
+        var launch = new BrowserType.LaunchOptions().setHeadless(config.headless());
+        String executable = System.getProperty("browserExecutable", "");
+        if (!executable.isBlank()) launch.setExecutablePath(Path.of(executable));
         browser = switch (config.browser()) {
-            case "firefox" -> playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(config.headless()));
-            case "webkit" -> playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(config.headless()));
-            default -> playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(config.headless()));
+            case "firefox" -> playwright.firefox().launch(launch);
+            case "webkit" -> playwright.webkit().launch(launch);
+            default -> playwright.chromium().launch(launch);
         };
         context = browser.newContext(new Browser.NewContextOptions().setBaseURL(app.baseUrl()).setViewportSize(1366, 900).setLocale("en-GB")
                 .setRecordVideoDir(directory.resolve("video")).setRecordVideoSize(1280, 720));
