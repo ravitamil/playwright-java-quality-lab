@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>dev.ravitamil</groupId><artifactId>playwright-java-quality-lab</artifactId><version>1.0.0</version>
+  <name>Playwright Java Quality Lab</name>
+  <description>Deterministic UI and API automation with a local banking demo and complete diagnostic evidence.</description>
+  <properties>
+    <maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <playwright.version>1.63.0</playwright.version><browser>chromium</browser><headless>true</headless>
+    <threads>2</threads><artifacts>all</artifacts><artifactDir>target/evidence</artifactDir><excludedGroups>failure-demo</excludedGroups>
+  </properties>
+  <dependencies>
+    <dependency><groupId>com.microsoft.playwright</groupId><artifactId>playwright</artifactId><version>${playwright.version}</version><scope>test</scope></dependency>
+    <dependency><groupId>org.testng</groupId><artifactId>testng</artifactId><version>7.12.0</version><scope>test</scope></dependency>
+    <dependency><groupId>com.aventstack</groupId><artifactId>extentreports</artifactId><version>5.1.2</version><scope>test</scope></dependency>
+    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><version>2.20.0</version><scope>test</scope></dependency>
+    <dependency><groupId>org.slf4j</groupId><artifactId>slf4j-simple</artifactId><version>2.0.17</version><scope>test</scope></dependency>
+  </dependencies>
+  <build><plugins>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.14.1</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.4</version><configuration>
+      <parallel>methods</parallel><threadCount>${threads}</threadCount><excludedGroups>${excludedGroups}</excludedGroups>
+      <systemPropertyVariables><browser>${browser}</browser><headless>${headless}</headless><artifacts>${artifacts}</artifacts><artifactDir>${artifactDir}</artifactDir></systemPropertyVariables>
+    </configuration></plugin>
+    <plugin><groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.5.1</version><configuration><classpathScope>test</classpathScope></configuration></plugin>
+  </plugins></build>
+  <profiles><profile><id>failure-demo</id><properties><excludedGroups>normal</excludedGroups></properties><build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><configuration><groups>failure-demo</groups></configuration></plugin></plugins></build></profile></profiles>
+</project>
