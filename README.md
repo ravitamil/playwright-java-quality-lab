@@ -8,8 +8,11 @@ This project demonstrates test design, business assertions, isolation, parallel 
 
 ![Actual browser screenshot from the transfer test](docs/images/transfer.png)
 
+![Actual Extent Spark report with screenshots, traces, video and logs](docs/images/extent-report.png)
+
 ## Explore the evidence
 
+- [Live evidence gallery, reports, video and trace downloads](https://ravitamil.github.io/quality-lab/)
 - [Evidence gallery and recorded demonstration](docs/evidence/README.md)
 - [Actual Extent Spark report](docs/evidence/passing/extent-report.html) — download/serve the evidence folder to open HTML; GitHub's file viewer does not render reports.
 - [Framework architecture and tradeoffs](docs/architecture.md)
@@ -64,6 +67,7 @@ Use `install --with-deps chromium` on Linux machines without browser system depe
 | `artifacts` | `all` | `failure` retains diagnostics only for failed tests |
 | `artifactDir` | `target/evidence` | report/evidence destination; use a different folder for each run |
 | `browserExecutable` | unset | optional local diagnostic override; standard CI uses the Playwright-matched browser |
+| `slowMo` | `0` | optional action delay in milliseconds for a watchable demonstration, not synchronization |
 
 ```sh
 mvn test -Dgroups=smoke

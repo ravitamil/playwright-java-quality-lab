@@ -28,16 +28,24 @@ public final class TestSession implements AutoCloseable {
         Files.createDirectories(directory);
         app = new BankingDemo();
         playwright = Playwright.create();
-        var launch = new BrowserType.LaunchOptions().setHeadless(config.headless());
+        var launch = new BrowserType.LaunchOptions().setHeadless(config.headless()).setSlowMo(Double.parseDouble(System.getProperty("slowMo", "0")));
         String executable = System.getProperty("browserExecutable", "");
         if (!executable.isBlank()) launch.setExecutablePath(Path.of(executable));
-        browser = switch (config.browser()) {
-            case "firefox" -> playwright.firefox().launch(launch);
-            case "webkit" -> playwright.webkit().launch(launch);
-            default -> playwright.chromium().launch(launch);
-        };
+        try {
+            browser = switch (config.browser()) {
+                case "firefox" -> playwright.firefox().launch(launch);
+                case "webkit" -> playwright.webkit().launch(launch);
+                default -> playwright.chromium().launch(launch);
+            };
+        } catch (RuntimeException failure) {
+            closeAfterFailure(failure, playwright, app);
+            throw failure;
+        }
+        BrowserContext partialContext = null;
+        try {
         context = browser.newContext(new Browser.NewContextOptions().setBaseURL(app.baseUrl()).setViewportSize(1366, 900).setLocale("en-GB")
                 .setRecordVideoDir(directory.resolve("video")).setRecordVideoSize(1280, 720));
+        partialContext = context;
         context.setDefaultTimeout(7000);
         context.tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true).setSources(true));
         page = context.newPage();
@@ -46,6 +54,16 @@ public final class TestSession implements AutoCloseable {
         page.onRequestFailed(request -> network.add("FAILED " + request.method() + " " + request.url() + " " + request.failure()));
         page.onResponse(response -> { if (response.url().contains("/api/")) network.add(response.status() + " " + response.request().method() + " " + response.url()); });
         page.navigate("/");
+        } catch (RuntimeException failure) {
+            closeAfterFailure(failure, partialContext, browser, playwright, app);
+            throw failure;
+        }
+    }
+    private static void closeAfterFailure(Throwable failure, AutoCloseable... resources) {
+        for (var resource : resources) {
+            if (resource == null) continue;
+            try { resource.close(); } catch (Exception cleanupError) { failure.addSuppressed(cleanupError); }
+        }
     }
     public void step(String description, Runnable action) { report.info(description); action.run(); }
     public void closeContext() { if (!contextClosed) { context.close(); contextClosed = true; } }

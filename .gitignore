@@ -3,5 +3,6 @@
 /.vscode/
 *.iml
 *.log
+!docs/evidence/**/*.log
 /.auth/
 .DS_Store

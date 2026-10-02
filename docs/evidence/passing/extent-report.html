@@ -1,0 +1,1987 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Playwright Java Quality Lab</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Ravikumar Tamilmani · UI & API evidence</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Oct 2, 2026 06:52:39 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">RavikumarTamilmani</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">api</a><a class="dropdown-item" href="#">accessibility</a><a class="dropdown-item" href="#">ui</a><a class="dropdown-item" href="#">smoke</a><a class="dropdown-item" href="#">network</a><a class="dropdown-item" href="#">files</a><a class="dropdown-item" href="#">auth</a><a class="dropdown-item" href="#">responsive</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">chromium</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author="RavikumarTamilmani"
+          tag="api"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">apiValidatesCurrencyPrecision</p>
+            <p class="text-sm">
+              <span>6:52:39 PM</span> / <span>00:00:10:066</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">apiValidatesCurrencyPrecision</h5>
+<span class='badge badge-success'>10.02.2026 6:52:39 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:49 PM</span>
+<span class='badge badge-default'>00:00:10:066</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Reject precision loss and nonpositive API amounts</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='apiValidatesCurrencyPrecision-539de713/screenshot.png' src="apiValidatesCurrencyPrecision-539de713/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          <a href='apiValidatesCurrencyPrecision-539de713/trace.zip'>Download Playwright trace</a> · <a href='apiValidatesCurrencyPrecision-539de713/video/page@e73b3206ab1b4cf5c0e049e30e05a406.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          <a href='apiValidatesCurrencyPrecision-539de713/console.log'>Console log</a> · <a href='apiValidatesCurrencyPrecision-539de713/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author="RavikumarTamilmani"
+          tag="api smoke"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">apiRejectsAnonymousAccountAccess</p>
+            <p class="text-sm">
+              <span>6:52:39 PM</span> / <span>00:00:09:786</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">apiRejectsAnonymousAccountAccess</h5>
+<span class='badge badge-success'>10.02.2026 6:52:39 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:49 PM</span>
+<span class='badge badge-default'>00:00:09:786</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Protected account endpoint rejects anonymous requests</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='apiRejectsAnonymousAccountAccess-c401f749/screenshot.png' src="apiRejectsAnonymousAccountAccess-c401f749/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          <a href='apiRejectsAnonymousAccountAccess-c401f749/trace.zip'>Download Playwright trace</a> · <a href='apiRejectsAnonymousAccountAccess-c401f749/video/page@ed9d8680e6db62b6d5885d548fb956a1.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:49 PM</td>
+        <td>
+          <a href='apiRejectsAnonymousAccountAccess-c401f749/console.log'>Console log</a> · <a href='apiRejectsAnonymousAccountAccess-c401f749/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author="RavikumarTamilmani"
+          tag="auth ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">authenticationStorageStateCanBeReused</p>
+            <p class="text-sm">
+              <span>6:52:49 PM</span> / <span>00:00:01:813</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">authenticationStorageStateCanBeReused</h5>
+<span class='badge badge-success'>10.02.2026 6:52:49 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:51 PM</span>
+<span class='badge badge-default'>00:00:01:813</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">auth</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Reuse cookie storage state in a new context without repeating login</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='authenticationStorageStateCanBeReused-c2f6d7d6/screenshot.png' src="authenticationStorageStateCanBeReused-c2f6d7d6/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          <a href='authenticationStorageStateCanBeReused-c2f6d7d6/trace.zip'>Download Playwright trace</a> · <a href='authenticationStorageStateCanBeReused-c2f6d7d6/video/page@04ba2afe2a0a4e363cdccf45878194a3.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          <a href='authenticationStorageStateCanBeReused-c2f6d7d6/console.log'>Console log</a> · <a href='authenticationStorageStateCanBeReused-c2f6d7d6/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author="RavikumarTamilmani"
+          tag="ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">insufficientFundsDoesNotChangeBalance</p>
+            <p class="text-sm">
+              <span>6:52:49 PM</span> / <span>00:00:01:817</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">insufficientFundsDoesNotChangeBalance</h5>
+<span class='badge badge-success'>10.02.2026 6:52:49 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:51 PM</span>
+<span class='badge badge-default'>00:00:01:817</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Insufficient funds preserves balance and creates no transaction</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='insufficientFundsDoesNotChangeBalance-ba0bd7d3/screenshot.png' src="insufficientFundsDoesNotChangeBalance-ba0bd7d3/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          <a href='insufficientFundsDoesNotChangeBalance-ba0bd7d3/trace.zip'>Download Playwright trace</a> · <a href='insufficientFundsDoesNotChangeBalance-ba0bd7d3/video/page@10e38f0a2076f468117d1deebff5b4d4.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:51 PM</td>
+        <td>
+          <a href='insufficientFundsDoesNotChangeBalance-ba0bd7d3/console.log'>Console log</a> · <a href='insufficientFundsDoesNotChangeBalance-ba0bd7d3/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author="RavikumarTamilmani"
+          tag="ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">invalidCredentialsShowAccessibleError</p>
+            <p class="text-sm">
+              <span>6:52:51 PM</span> / <span>00:00:02:439</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidCredentialsShowAccessibleError</h5>
+<span class='badge badge-success'>10.02.2026 6:52:51 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:53 PM</span>
+<span class='badge badge-default'>00:00:02:439</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Reject invalid credentials without exposing account data</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='invalidCredentialsShowAccessibleError-06fb7910/screenshot.png' src="invalidCredentialsShowAccessibleError-06fb7910/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          <a href='invalidCredentialsShowAccessibleError-06fb7910/trace.zip'>Download Playwright trace</a> · <a href='invalidCredentialsShowAccessibleError-06fb7910/video/page@ae655d29fc6850f7cde96d2c66e14593.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          <a href='invalidCredentialsShowAccessibleError-06fb7910/console.log'>Console log</a> · <a href='invalidCredentialsShowAccessibleError-06fb7910/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author="RavikumarTamilmani"
+          tag="ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">invalidCredentialsShowAccessibleError</p>
+            <p class="text-sm">
+              <span>6:52:51 PM</span> / <span>00:00:02:222</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">invalidCredentialsShowAccessibleError</h5>
+<span class='badge badge-success'>10.02.2026 6:52:51 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:53 PM</span>
+<span class='badge badge-default'>00:00:02:222</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Reject invalid credentials without exposing account data</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='invalidCredentialsShowAccessibleError-6e411f31/screenshot.png' src="invalidCredentialsShowAccessibleError-6e411f31/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          <a href='invalidCredentialsShowAccessibleError-6e411f31/trace.zip'>Download Playwright trace</a> · <a href='invalidCredentialsShowAccessibleError-6e411f31/video/page@d01b1652d9f18ce6b841f6123a327e69.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:53 PM</td>
+        <td>
+          <a href='invalidCredentialsShowAccessibleError-6e411f31/console.log'>Console log</a> · <a href='invalidCredentialsShowAccessibleError-6e411f31/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author="RavikumarTamilmani"
+          tag="accessibility ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">keyboardOnlyLogin</p>
+            <p class="text-sm">
+              <span>6:52:51 PM</span> / <span>00:00:02:322</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">keyboardOnlyLogin</h5>
+<span class='badge badge-success'>10.02.2026 6:52:51 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:54 PM</span>
+<span class='badge badge-default'>00:00:02:322</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">accessibility</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Keyboard-only sign-in uses correctly labelled inputs and focus order</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:54 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:54 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='keyboardOnlyLogin-4607657b/screenshot.png' src="keyboardOnlyLogin-4607657b/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:54 PM</td>
+        <td>
+          <a href='keyboardOnlyLogin-4607657b/trace.zip'>Download Playwright trace</a> · <a href='keyboardOnlyLogin-4607657b/video/page@58db441ded7ae0e4ce582a27183484da.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:54 PM</td>
+        <td>
+          <a href='keyboardOnlyLogin-4607657b/console.log'>Console log</a> · <a href='keyboardOnlyLogin-4607657b/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author="RavikumarTamilmani"
+          tag="auth ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">logoutRevokesApiSession</p>
+            <p class="text-sm">
+              <span>6:52:54 PM</span> / <span>00:00:01:497</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">logoutRevokesApiSession</h5>
+<span class='badge badge-success'>10.02.2026 6:52:54 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:55 PM</span>
+<span class='badge badge-default'>00:00:01:497</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">auth</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Logout invalidates server session, not just the visible UI</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='logoutRevokesApiSession-9dfacfc7/screenshot.png' src="logoutRevokesApiSession-9dfacfc7/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          <a href='logoutRevokesApiSession-9dfacfc7/trace.zip'>Download Playwright trace</a> · <a href='logoutRevokesApiSession-9dfacfc7/video/page@d45b5b57fe1ab11ecd8d4eed5702f833.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          <a href='logoutRevokesApiSession-9dfacfc7/console.log'>Console log</a> · <a href='logoutRevokesApiSession-9dfacfc7/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="9"
+          author="RavikumarTamilmani"
+          tag="responsive ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">mobileLayoutSupportsTransfer</p>
+            <p class="text-sm">
+              <span>6:52:54 PM</span> / <span>00:00:01:636</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">mobileLayoutSupportsTransfer</h5>
+<span class='badge badge-success'>10.02.2026 6:52:54 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:55 PM</span>
+<span class='badge badge-default'>00:00:01:636</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">responsive</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Mobile viewport has no horizontal overflow and supports transfers</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='mobileLayoutSupportsTransfer-1e7c8347/screenshot.png' src="mobileLayoutSupportsTransfer-1e7c8347/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          <a href='mobileLayoutSupportsTransfer-1e7c8347/trace.zip'>Download Playwright trace</a> · <a href='mobileLayoutSupportsTransfer-1e7c8347/video/page@3b4b9176ac77a24c1751fa3ef2103706.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:55 PM</td>
+        <td>
+          <a href='mobileLayoutSupportsTransfer-1e7c8347/console.log'>Console log</a> · <a href='mobileLayoutSupportsTransfer-1e7c8347/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author="RavikumarTamilmani"
+          tag="network ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">mockedOutageRecoversWithoutDebit</p>
+            <p class="text-sm">
+              <span>6:52:55 PM</span> / <span>00:00:01:849</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">mockedOutageRecoversWithoutDebit</h5>
+<span class='badge badge-success'>10.02.2026 6:52:55 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:57 PM</span>
+<span class='badge badge-default'>00:00:01:849</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">network</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Mock a service outage; prove failure messaging and recovery using real API</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='mockedOutageRecoversWithoutDebit-563caf07/screenshot.png' src="mockedOutageRecoversWithoutDebit-563caf07/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          <a href='mockedOutageRecoversWithoutDebit-563caf07/trace.zip'>Download Playwright trace</a> · <a href='mockedOutageRecoversWithoutDebit-563caf07/video/page@6b7e3c5d8287681a3fc1b88862d466dc.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          <a href='mockedOutageRecoversWithoutDebit-563caf07/console.log'>Console log</a> · <a href='mockedOutageRecoversWithoutDebit-563caf07/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="11"
+          author="RavikumarTamilmani"
+          tag="files ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">statementDownloadAndReceiptUpload</p>
+            <p class="text-sm">
+              <span>6:52:55 PM</span> / <span>00:00:01:904</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">statementDownloadAndReceiptUpload</h5>
+<span class='badge badge-success'>10.02.2026 6:52:55 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:57 PM</span>
+<span class='badge badge-default'>00:00:01:904</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">files</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Download actual CSV and verify transfer contents; preview a synthetic uploaded receipt</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='statementDownloadAndReceiptUpload-5d71cda6/screenshot.png' src="statementDownloadAndReceiptUpload-5d71cda6/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          <a href='statementDownloadAndReceiptUpload-5d71cda6/trace.zip'>Download Playwright trace</a> · <a href='statementDownloadAndReceiptUpload-5d71cda6/video/page@38fed693c93efec8de2efd5b3ec403d0.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:57 PM</td>
+        <td>
+          <a href='statementDownloadAndReceiptUpload-5d71cda6/console.log'>Console log</a> · <a href='statementDownloadAndReceiptUpload-5d71cda6/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="12"
+          author="RavikumarTamilmani"
+          tag="api"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">transferApiIsIdempotent</p>
+            <p class="text-sm">
+              <span>6:52:57 PM</span> / <span>00:00:01:321</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">transferApiIsIdempotent</h5>
+<span class='badge badge-success'>10.02.2026 6:52:57 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:58 PM</span>
+<span class='badge badge-default'>00:00:01:321</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">api</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">API idempotency prevents double debit and rejects key reuse with changed payload</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:58 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:58 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='transferApiIsIdempotent-c1619952/screenshot.png' src="transferApiIsIdempotent-c1619952/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:58 PM</td>
+        <td>
+          <a href='transferApiIsIdempotent-c1619952/trace.zip'>Download Playwright trace</a> · <a href='transferApiIsIdempotent-c1619952/video/page@c3910bd5a0f3ee2e264c91634af324fb.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:58 PM</td>
+        <td>
+          <a href='transferApiIsIdempotent-c1619952/console.log'>Console log</a> · <a href='transferApiIsIdempotent-c1619952/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="13"
+          author="RavikumarTamilmani"
+          tag="smoke ui"
+          device="chromium">
+          <div class="test-detail">
+            <p class="name">transferUpdatesUiAndApi</p>
+            <p class="text-sm">
+              <span>6:52:57 PM</span> / <span>00:00:01:559</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">transferUpdatesUiAndApi</h5>
+<span class='badge badge-success'>10.02.2026 6:52:57 PM</span>
+<span class='badge badge-danger'>10.02.2026 6:52:59 PM</span>
+<span class='badge badge-default'>00:00:01:559</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">RavikumarTamilmani</span>
+<span class="badge badge-pill badge-default">smoke</span>
+<span class="badge badge-pill badge-default">ui</span>
+<span class="badge badge-pill badge-default">chromium</span></div>
+<div class="m-t-10 m-l-5">Sign in and transfer money; verify UI, API balance and transaction record</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:58 PM</td>
+        <td>
+          Send £125.50 to Jamie Lee
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>6:52:59 PM</td>
+        <td>
+          All assertions passed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:59 PM</td>
+        <td>
+          Final browser state
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='transferUpdatesUiAndApi-b7e1fe44/screenshot.png' src="transferUpdatesUiAndApi-b7e1fe44/screenshot.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:59 PM</td>
+        <td>
+          <a href='transferUpdatesUiAndApi-b7e1fe44/trace.zip'>Download Playwright trace</a> · <a href='transferUpdatesUiAndApi-b7e1fe44/video/page@602fcf9e88c5bfd1ef5fbbafd691590e.webm'>Watch recording</a>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>6:52:59 PM</td>
+        <td>
+          <a href='transferUpdatesUiAndApi-b7e1fe44/console.log'>Console log</a> · <a href='transferUpdatesUiAndApi-b7e1fe44/network.log'>Network log</a>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">8</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>3</span>
+</span>
+<p class="name">api</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>api</h4>
+<span status="pass" class='badge log pass-bg'>3 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>apiValidatesCurrencyPrecision</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>apiRejectsAnonymousAccountAccess</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>transferApiIsIdempotent</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">accessibility</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>accessibility</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>keyboardOnlyLogin</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>10</span>
+</span>
+<p class="name">ui</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>ui</h4>
+<span status="pass" class='badge log pass-bg'>10 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>authenticationStorageStateCanBeReused</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>insufficientFundsDoesNotChangeBalance</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>keyboardOnlyLogin</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>logoutRevokesApiSession</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mobileLayoutSupportsTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>mockedOutageRecoversWithoutDebit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>statementDownloadAndReceiptUpload</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>transferUpdatesUiAndApi</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">smoke</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>smoke</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>apiRejectsAnonymousAccountAccess</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>transferUpdatesUiAndApi</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">network</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>network</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>mockedOutageRecoversWithoutDebit</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">files</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>files</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>statementDownloadAndReceiptUpload</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+</span>
+<p class="name">auth</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>auth</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>authenticationStorageStateCanBeReused</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>logoutRevokesApiSession</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">responsive</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>responsive</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mobileLayoutSupportsTransfer</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+</span>
+<p class="name">chromium</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>chromium</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>apiValidatesCurrencyPrecision</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>apiRejectsAnonymousAccountAccess</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>authenticationStorageStateCanBeReused</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>insufficientFundsDoesNotChangeBalance</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>keyboardOnlyLogin</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>logoutRevokesApiSession</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mobileLayoutSupportsTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>mockedOutageRecoversWithoutDebit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>statementDownloadAndReceiptUpload</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>transferApiIsIdempotent</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>transferUpdatesUiAndApi</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>13</span>
+</span>
+<p class="name">RavikumarTamilmani</p>
+<p class="duration text-sm">13 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>RavikumarTamilmani</h4>
+<span status="pass" class='badge log pass-bg'>13 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>apiValidatesCurrencyPrecision</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:39 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>apiRejectsAnonymousAccountAccess</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>authenticationStorageStateCanBeReused</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>insufficientFundsDoesNotChangeBalance</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>invalidCredentialsShowAccessibleError</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>keyboardOnlyLogin</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>logoutRevokesApiSession</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>mobileLayoutSupportsTransfer</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>mockedOutageRecoversWithoutDebit</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>statementDownloadAndReceiptUpload</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>transferApiIsIdempotent</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>18:52:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>transferUpdatesUiAndApi</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Oct 2, 2026 06:52:39 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Oct 2, 2026 06:52:59 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>13</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>13</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='24%'><b>13</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>40</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"apiValidatesCurrencyPrecision":10.066,"apiRejectsAnonymousAccountAccess":9.786,"authenticationStorageStateCanBeReused":1.813,"insufficientFundsDoesNotChangeBalance":1.817,"invalidCredentialsShowAccessibleError":2.439,"invalidCredentialsShowAccessibleError":2.222,"keyboardOnlyLogin":2.322,"logoutRevokesApiSession":1.497,"mobileLayoutSupportsTransfer":1.636,"mockedOutageRecoversWithoutDebit":1.849,"statementDownloadAndReceiptUpload":1.904,"transferApiIsIdempotent":1.321,"transferUpdatesUiAndApi":1.559
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>RavikumarTamilmani</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>api</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>accessibility</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>ui</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>smoke</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>network</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>files</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>responsive</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>chromium</td>
+<td>13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Browser</td>
+<td>chromium</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>17.0.20.1</td>
+</tr>
+<tr>
+<td>Artifact policy</td>
+<td>all</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>Local synthetic banking fixture</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 13,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 13,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 40
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "ciRun": 37050303506,
+  "ciCommit": "89620ff325716392427fe3e906cab0b0ce182264",
+  "passing": 13,
+  "intentionalFailures": 1,
+  "transfer": "transferUpdatesUiAndApi-b7e1fe44",
+  "failure": "intentionalBalanceMismatch-3f216dcb",
+  "mobile": "mobileLayoutSupportsTransfer-1e7c8347",
+  "video": "walkthrough/transferUpdatesUiAndApi-f9e1e147/video/page@beab204ac4e4d282a60f05a135dce6b1.webm"
+}

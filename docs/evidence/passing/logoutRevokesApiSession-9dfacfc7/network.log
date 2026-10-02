@@ -1,0 +1,4 @@
+401 GET http://127.0.0.1:37043/api/account
+200 POST http://127.0.0.1:37043/api/login
+200 GET http://127.0.0.1:37043/api/account
+200 POST http://127.0.0.1:37043/api/logout

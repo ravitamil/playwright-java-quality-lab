@@ -54,7 +54,7 @@ public abstract class BaseTest {
             }
         } catch (Exception exception) {
             artifactError = exception;
-            s.report.warning("Evidence capture failed: " + exception.getMessage());
+            s.report.fail("Evidence capture failed: " + exception.getMessage());
             if (failed) s.report.fail(result.getThrowable());
         } finally {
             try { s.close(); } finally { sessions.remove(); }
