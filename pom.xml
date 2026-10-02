@@ -22,7 +22,7 @@
       <parallel>methods</parallel><threadCount>${threads}</threadCount><excludedGroups>${excludedGroups}</excludedGroups>
       <systemPropertyVariables><browser>${browser}</browser><headless>${headless}</headless><artifacts>${artifacts}</artifacts><artifactDir>${artifactDir}</artifactDir></systemPropertyVariables>
     </configuration></plugin>
-    <plugin><groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.5.1</version><configuration><classpathScope>test</classpathScope></configuration></plugin>
+    <plugin><groupId>org.codehaus.mojo</groupId><artifactId>exec-maven-plugin</artifactId><version>3.6.4</version><configuration><classpathScope>test</classpathScope></configuration></plugin>
   </plugins></build>
   <profiles><profile><id>failure-demo</id><properties><excludedGroups>normal</excludedGroups></properties><build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><configuration><groups>failure-demo</groups></configuration></plugin></plugins></build></profile></profiles>
 </project>
